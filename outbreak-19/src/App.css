@@ -29,4 +29,32 @@ h1
   background-color: #005bff;
 }
 
+.getinfo
+{
+  border: none;
+  color: white;
+  width: 320px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.select
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
