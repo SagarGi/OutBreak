@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1ea400197564161b02b60a44dacbb08",
+    "revision": "df3ad6f9f3cb6d91b612dcf388211f92",
     "url": "/outbreak/index.html"
   },
   {
-    "revision": "3c092eb024509e214438",
-    "url": "/outbreak/static/css/main.fc02e1bb.chunk.css"
+    "revision": "895b645744427ccaaa89",
+    "url": "/outbreak/static/css/main.8a67e14b.chunk.css"
   },
   {
     "revision": "37abf3ff0043d29b758a",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/outbreak/static/js/2.7aca7a1e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3c092eb024509e214438",
+    "revision": "895b645744427ccaaa89",
     "url": "/outbreak/static/js/main.54dc47d6.chunk.js"
   },
   {
