@@ -2,6 +2,10 @@
   "name": "outbreak-19",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node" : "12.14.1",
+    "npm" : "6.13.4"
+  },
   "proxy": "http://localhost:3002",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
