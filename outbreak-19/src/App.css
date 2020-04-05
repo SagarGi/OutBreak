@@ -5,6 +5,19 @@
   overflow: auto;
 }
 
+h1
+{
+  margin-top: 4vh;
+  color: white;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 35px;
+}
+
+.col
+{
+  font-size: 15px;
+}
+
 .wrapper
 {
   width: 75%;
@@ -13,6 +26,7 @@
   margin-top: 3vh;
   box-shadow: 3px 6px 8px 3px rgba(14, 14, 14, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+  background-color: #005bff;
 }
 
 
