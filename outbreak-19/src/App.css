@@ -25,7 +25,6 @@ p{
 .col
 {
   font-size: 15px;
-  height: 55px;
   align-items: center;
   justify-content: center;
 }
@@ -39,13 +38,14 @@ p{
   box-shadow: 3px 6px 8px 3px rgba(14, 14, 14, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   background-color: #ffffff;
+  padding: 25px;
 }
 
 .getinfo
 {
   border: none;
   color: white;
-  width: 320px;
+  width: 300px;
   height: 40px;
   text-align: center;
   text-decoration: none;
