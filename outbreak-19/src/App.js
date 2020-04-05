@@ -5,9 +5,9 @@ import axios from 'axios'
 import Select from 'react-select'
 
 const options = [
-  { value: 'nepal', label: 'Nepal' },
-  { value: 'india', label: 'India' },
-  { value: 'usa', label: 'USA' },
+  { value: 'Nepal', label: 'Nepal' },
+  { value: 'India', label: 'India' },
+  { value: 'USA', label: 'USA' },
   { value: 'Italy', label: 'Italy'},
   { value: 'Spain', label: 'Spain'},
   { value: 'Germany', label: 'Germany'},
@@ -83,11 +83,26 @@ constructor()
   this.state = {
     globalCases: '-',
     globalDeaths: '-',
-    globalRecovered: '-'
+    globalRecovered: '-',
+    selectedOption: '',
+    countryName: '',
+    cases:'',
+    todaysCases: '',
+    deaths: '',
+    todayDeaths:'',
+    recovered: '',
+    active:'',
+    critical: ''
   }
 
 }
 
+handleChange = selectedOption => {
+  this.setState(
+    { selectedOption },
+    () => this.state.selectedOption.value
+  )
+  }
 
 //gets invoked when page is realoaded
 componentDidMount()
@@ -105,6 +120,32 @@ componentDidMount()
   
 }
 
+sendPost()
+{
+  if(!this.state.selectedOption.value)
+  {
+    alert('Please select your country!!!')
+  }
+  axios.post('/covid-19',{
+    country1 : this.state.selectedOption.value
+  })
+  .then(response =>{
+    console.log(response.data)
+    this.setState({
+      countryName : response.data.country,
+      cases : response.data.cases,
+      todayCases : response.data.todayCases,
+      deaths : response.data.deaths,
+      todayDeaths : response.data.todayDeaths,
+      recovered : response.data.recovered,
+      active : response.data.active,
+      critical : response.data.critical
+      
+    })
+    
+  })
+}
+
 
   render()
   {
@@ -116,10 +157,10 @@ componentDidMount()
               <h5>World Wide:</h5>
               <div className = "container">
 
-                <div className = 'row ml-2 mr-2 mb-2'>
-                  <div className = 'col bg-dark text-white'><p><b><u>Total Cases:</u></b><br></br>{this.state.globalCases}</p></div>
-                  <div className = 'col bg-danger text-white'><p><b><u>Total Deaths:</u></b><br></br>{this.state.globalDeaths}</p></div>
-                  <div className = 'col bg-success text-white'><p><b><u>Total Recovered:</u></b><br></br>{this.state.globalRecovered}</p></div>
+                <div className = 'row ml-4 mr-4 mb-2'>
+                  <div className = 'col  bg-dark text-white'><p><b><u>Total Cases:</u></b><br></br>{this.state.globalCases}</p></div>
+                  <div className = 'col  bg-danger text-white'><p><b><u>Total Deaths:</u></b><br></br>{this.state.globalDeaths}</p></div>
+                  <div className = 'col  bg-success text-white'><p><b><u>Total Recovered:</u></b><br></br>{this.state.globalRecovered}</p></div>
 
                 </div>
 
@@ -133,16 +174,18 @@ componentDidMount()
                     <div className = "col-sm select">
                     <Select
                     styles={customStyles}
-                     options={options}
+                    value={this.state.selectedOption}
+                    onChange={this.handleChange}
+                    options={options}
                     />
                     </div>
                     <div className = "col-sm button">
-                      <button className = "getinfo">Get Details</button>
+                      <button className = "getinfo" onClick = {() => this.sendPost()}>Get Details</button>
                     </div>
                     </div>
                 </div>
 
-                <h5 className = "mt-4">SELECTED COUNTRY: {this.state.globalCases}</h5>
+                <h5 className = "mt-4">SELECTED COUNTRY: {this.state.selectedOption.value}</h5>
 
                 <div className = "container">
                   <div className = 'row ml-4 mr-4'>
@@ -157,9 +200,9 @@ componentDidMount()
                   </div>
 
                 </div>
-
-
             </div>
+
+           
           </div>
       </div>
     )
