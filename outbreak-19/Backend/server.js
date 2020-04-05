@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
   }));
-const port = 3002;
+const port = process.env.PORT || 3002
 
 app.get('/covid-19/country', (req,res,next) =>{
     request.get('https://corona.lmao.ninja/all', (error,response,body) =>{
