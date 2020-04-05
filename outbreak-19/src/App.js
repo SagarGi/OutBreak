@@ -5,62 +5,62 @@ import axios from 'axios'
 import Select from 'react-select'
 
 const options = [
-  { value: 'Nepal', label: 'Nepal' },
-  { value: 'India', label: 'India' },
-  { value: 'USA', label: 'USA' },
-  { value: 'Italy', label: 'Italy'},
-  { value: 'Spain', label: 'Spain'},
-  { value: 'Germany', label: 'Germany'},
-  { value: 'Iran', label: 'Iran'},
-  { value: 'France', label: 'France'},
-  { value: 'UK', label: 'UK'},
-  { value: 'Switzerland', label: 'Switzerland'},
-  { value: 'Belgium', label: 'Belgium'},
-  { value: 'Netherlands', label: 'Netherlands'},
-  { value: 'S. Korea', label: 'S. Korea'},
-  { value: 'Austria', label: 'Austria'},
-  { value: 'Turkey', label: 'Turkey'},
-  { value: 'Canada', label: 'Canada'},
-  { value: 'Portugal', label: 'Portugal'},
-  { value: 'Norway', label: 'Norway'},
-  { value: 'Israel', label: 'Israel'},
-  { value: 'Australia', label: 'Australia'},
-  { value: 'Sweden', label: 'Sweden'},
-  { value: 'Malaysia', label: 'Malaysia'},
-  { value: 'Ireland', label: 'Ireland'},
-  { value: 'Denmark', label: 'Denmark'},
-  { value: 'Chile', label: 'Chile'},
-  { value: 'Poland', label: 'Poland'},
-  { value: 'Japan', label: 'Japan'},
-  { value: 'Russia', label: 'Russia'},
-  { value: 'Pakistan', label: 'Pakistan'},
-  { value: 'Philippines', label: 'Philippines'},
-  { value: 'Thailand', label: 'Thailand'},
-  { value: 'Saudi Arabia', label: 'Saudi Arabia'},
-  { value: 'Indonesia', label: 'Indonesia'},
-  { value: 'Finland', label: 'Finland'},
-  { value: 'South Africa', label: 'South Africa'},
-  { value: 'Greece', label: 'Greece'},
-  { value: 'Mexico', label: 'Mexico'},
-  { value: 'Singapore', label: 'Singapore'},
-  { value: 'Hong Kong', label: 'Hong Kong'},
-  { value: 'Qatar', label: 'Qatar'},
-  { value: 'UAE', label: 'UAE'},
-  { value: 'New Zealand', label: 'New Zealand'},
-  { value: 'Iraq', label: 'Iraq'},
-  { value: 'Kuwait', label: 'Kuwait'},
-  { value: 'Cyprus', label: 'Cyprus'},
-  { value: 'Vietnam', label: 'Vietnam'},
-  { value: 'Ghana', label: 'Ghana'},
-  { value: 'Afghanistan', label: 'Afghanistan'},
-  { value: 'Kenya', label: 'Kenya'},
-  { value: 'Bangladesh', label: 'Bangladesh'},
-  { value: 'China', label: 'China'},
-  { value: 'Bhutan', label: 'Bhutan'},
-  {value : 'Maldives', label: 'Maldives'},
-  {value : 'Ireland', label: 'Ireland'},
-  {value : 'Brazil', label: 'Brazil'},
-  {value : 'Argentina', label: 'Argentina'}
+  { value: 'Nepal', label: 'Nepal', code: 'np' },
+  { value: 'India', label: 'India', code: 'in' },
+  { value: 'USA', label: 'USA', code: 'us' },
+  { value: 'Italy', label: 'Italy', code: 'it'},
+  { value: 'Spain', label: 'Spain', code: 'es'},
+  { value: 'Germany', label: 'Germany', code: 'de'},
+  { value: 'Iran', label: 'Iran', code: 'ir'},
+  { value: 'France', label: 'France', code: 'fr'},
+  { value: 'UK', label: 'UK' , code: 'gb'},
+  { value: 'Switzerland', label: 'Switzerland', code: 'ch'},
+  { value: 'Belgium', label: 'Belgium', code: 'be'},
+  { value: 'Netherlands', label: 'Netherlands', code: 'nl'},
+  { value: 'S. Korea', label: 'S. Korea', code: 'kr'},
+  { value: 'Austria', label: 'Austria', code: 'at'},
+  { value: 'Turkey', label: 'Turkey', code: 'tr'},
+  { value: 'Canada', label: 'Canada', code: 'ca'},
+  { value: 'Portugal', label: 'Portugal', code: 'pt'},
+  { value: 'Norway', label: 'Norway', code: 'no'},
+  { value: 'Israel', label: 'Israel', code: 'il'},
+  { value: 'Australia', label: 'Australia', code: 'au'},
+  { value: 'Sweden', label: 'Sweden', code: 'se'},
+  { value: 'Malaysia', label: 'Malaysia', code: 'my'},
+  { value: 'Ireland', label: 'Ireland', code: 'ie'},
+  { value: 'Denmark', label: 'Denmark', code: 'dk'},
+  { value: 'Chile', label: 'Chile', code: 'cl'},
+  { value: 'Poland', label: 'Poland', code: 'pl'},
+  { value: 'Japan', label: 'Japan', code: 'jp'},
+  { value: 'Russia', label: 'Russia', code: 'ru'},
+  { value: 'Pakistan', label: 'Pakistan', code: 'pk'},
+  { value: 'Philippines', label: 'Philippines', code: 'ph'},
+  { value: 'Thailand', label: 'Thailand', code: 'th'},
+  { value: 'Saudi Arabia', label: 'Saudi Arabia', code: 'sa'},
+  { value: 'Indonesia', label: 'Indonesia', code: 'id'},
+  { value: 'Finland', label: 'Finland', code: 'fi'},
+  { value: 'South Africa', label: 'South Africa', code: 'za'},
+  { value: 'Greece', label: 'Greece', code: 'gr'},
+  { value: 'Mexico', label: 'Mexico', code: 'mx'},
+  { value: 'Singapore', label: 'Singapore', code: 'sg'},
+  { value: 'Hong Kong', label: 'Hong Kong', code: 'hk'},
+  { value: 'Qatar', label: 'Qatar', code: 'qa'},
+  { value: 'UAE', label: 'UAE', code: 'ae'},
+  { value: 'New Zealand', label: 'New Zealand', code: 'nz'},
+  { value: 'Iraq', label: 'Iraq', code: 'iq'},
+  { value: 'Kuwait', label: 'Kuwait', code: 'kw'},
+  { value: 'Cyprus', label: 'Cyprus', code: 'cy'},
+  { value: 'Vietnam', label: 'Vietnam', code: 'vn'},
+  { value: 'Ghana', label: 'Ghana', code: 'gh'},
+  { value: 'Afghanistan', label: 'Afghanistan', code: 'af'},
+  { value: 'Kenya', label: 'Kenya', code: 'ke'},
+  { value: 'Bangladesh', label: 'Bangladesh', code: 'bd'},
+  { value: 'China', label: 'China', code: 'cn'},
+  { value: 'Bhutan', label: 'Bhutan', code: 'bt'},
+  {value : 'Maldives', label: 'Maldives', code: 'mv'},
+  {value : 'Ireland', label: 'Ireland', code: 'ie'},
+  {value : 'Brazil', label: 'Brazil', code: 'br'},
+  {value : 'Argentina', label: 'Argentina', code: 'ar'}
 ];
 
 const customStyles = {
@@ -92,7 +92,8 @@ constructor()
     todayDeaths:'-',
     recovered: '-',
     active:'-',
-    critical: '-'
+    critical: '-',
+    url: ''
   }
 
 }
@@ -102,7 +103,7 @@ handleChange = selectedOption => {
     { selectedOption },
     () => this.state.selectedOption.value
   )
-  }
+}
 
 //gets invoked when page is realoaded
 componentDidMount()
@@ -116,8 +117,7 @@ componentDidMount()
       globalRecovered : response.data.recovered
     })
    })
-
-  
+   
 }
 
 sendPost()
@@ -139,8 +139,8 @@ sendPost()
       todayDeaths : response.data.todayDeaths,
       recovered : response.data.recovered,
       active : response.data.active,
-      critical : response.data.critical
-      
+      critical : response.data.critica,
+      url : `https://www.countryflags.io/${this.state.selectedOption.code}/flat/32.png`
     })
     
   })
@@ -194,7 +194,7 @@ sendPost()
                     </div>
                 </div>
 
-                <h5 className = "mt-4">Country: {this.state.countryName}</h5>
+                <h5 className = "mt-4">Country:<img className = "ml-4" src = {this.state.url}></img> </h5>
 
                 <div className = "container">
                   <div className = 'row'>
