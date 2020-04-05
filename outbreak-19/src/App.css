@@ -19,7 +19,7 @@ h5{
 }
 
 p{
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .col
@@ -32,13 +32,13 @@ p{
 .wrapper
 {
   width: 75%;
-  height: 94vh;
   margin: auto;
   margin-top: 3vh;
   box-shadow: 3px 6px 8px 3px rgba(14, 14, 14, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   background-color: #ffffff;
-  padding: 25px;
+  padding: 20px;
+  margin-bottom: 5px;
 }
 
 .getinfo
@@ -70,4 +70,25 @@ p{
     justify-content: center;
 }
 
+
+/* media queries for some responsive */
+@media only screen and (max-width: 600px) {
+  h1
+  {
+    font-size: 25px;
+  }
+  h5
+  {
+    font-size: 15px;
+  }
+  p
+  {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+  .getinfo
+  {
+    font-size: 15px;
+  }
+}
 

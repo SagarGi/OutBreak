@@ -166,37 +166,46 @@ sendPost()
 
               </div>
 
-              <p className = "text-white mt-3 text-dark">Please Select Any Country To Get Information</p>
+              <h6 className = "text-white mt-3 text-dark">Please Select Any Country To Get Information:</h6>
 
               <div className = "container">
-                <div className = "row m-2 mt-3 mb-3">
+                <div className = "row mb-3">
 
-                    <div className = "col-xl-6 col-lg-6 col-md-12 col-sm-12 select">
+                    <div className = "col-xl-6 col-lg-6 col-md-12 col-sm-12 mt-3 select">
                     <Select
                     styles={customStyles}
                     value={this.state.selectedOption}
                     onChange={this.handleChange}
                     options={options}
+                    theme={theme => ({
+                      ...theme,
+                      borderRadius: 5,
+                      colors: {
+                        ...theme.colors,
+                        primary25: 'hotpink',
+                        primary: 'blue',
+                      },
+                    })}
                     />
                     </div>
-                    <div className = "col-xl-6 col-lg-6 col-md-12 col-sm-12 button">
-                      <button className = "getinfo" onClick = {() => this.sendPost()}>Get Details</button>
+                    <div className = "col-xl-6 col-lg-6 col-md-12 col-sm-12 mt-3 button">
+                      <button className = "getinfo" onClick = {() => this.sendPost()}>Get Information</button>
                     </div>
                     </div>
                 </div>
 
-                <h5 className = "mt-4">COUNTRY: {this.state.countryName}</h5>
+                <h5 className = "mt-4">Country: {this.state.countryName}</h5>
 
                 <div className = "container">
                   <div className = 'row'>
 
-                  <div className = 'col-xl-6 col-lg-6 col-md-6 mt-4 bg-dark text-white'><p><b><u>Cases:</u></b><br></br>{this.state.cases}</p></div>
-                  <div className = 'col-xl-6 col-lg-6 col-md-6 mt-4 bg-danger text-white'><p><b><u>Deaths:</u></b><br></br>{this.state.deaths}</p></div>
-                  <div className = 'col-xl-6 col-lg-6 col-md-6 mt-4 bg-success text-white'><p><b><u>Recovered:</u></b><br></br>{this.state.recovered}</p></div>
-                  <div className = 'col-xl-6 col-lg-6 col-md-6 mt-4 bg-secondary text-white'><p><b><u>Todays Cases</u></b><br></br>{this.state.todaysCases}</p></div>
-                  <div className = 'col-xl-6 col-lg-6 col-md-6 mt-4 bg-warning text-white'><p><b><u>Todays Deaths</u></b><br></br>{this.state.todayDeaths}</p></div>
-                  <div className = 'col-xl-6 col-lg-6 col-md-6 mt-4 bg-info text-white'><p><b><u>Actives</u></b><br></br>{this.state.active}</p></div>
-                  <div className = 'col-xl-6 col-lg-6 col-md-6 mt-4  mb-4 bg-dark text-white'><p><b><u>Critical</u></b><br></br>{this.state.critical}</p></div>
+                  <div className = 'col-xl-4 col-lg-4 col-md-6 mt-4 bg-dark text-white'><p><b><u>Cases:</u></b><br></br>{this.state.cases}</p></div>
+                  <div className = 'col-xl-4 col-lg-4 col-md-6 mt-4 bg-danger text-white'><p><b><u>Deaths:</u></b><br></br>{this.state.deaths}</p></div>
+                  <div className = 'col-xl-4 col-lg-4 col-md-6 mt-4 bg-success text-white'><p><b><u>Recovered:</u></b><br></br>{this.state.recovered}</p></div>
+                  <div className = 'col-xl-4 col-lg-4 col-md-6 mt-4 bg-secondary text-white'><p><b><u>Todays Cases</u></b><br></br>{this.state.todaysCases}</p></div>
+                  <div className = 'col-xl-4 col-lg-4 col-md-6 mt-4 bg-warning text-white'><p><b><u>Todays Deaths</u></b><br></br>{this.state.todayDeaths}</p></div>
+                  <div className = 'col-xl-4 col-lg-4 col-md-6 mt-4 bg-info text-white'><p><b><u>Active</u></b><br></br>{this.state.active}</p></div>
+                  <div className = 'col-xl-4 col-lg-4 col-md-6 mt-4 bg-dark text-white'><p><b><u>Critical</u></b><br></br>{this.state.critical}</p></div>
                  
                   </div>
 
