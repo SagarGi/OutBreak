@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
   }));
-const port = 3001;
+const port = 3002;
 
 app.get('/covid-19/country', (req,res,next) =>{
     request.get('https://corona.lmao.ninja/all', (error,response,body) =>{
@@ -28,6 +28,6 @@ app.post('/covid-19',(req,res,next) =>{
 
 
 app.listen(port, ()=>{
-    console.log("Server is listening...........3001")
+    console.log("Server is listening...........3002")
 })
 
