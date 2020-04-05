@@ -113,21 +113,22 @@ componentDidMount()
           <div className = "container main-content">
             <div className = "card wrapper">
               <h1><u>COVID-19 INFORMATION HUB</u></h1>
+              <h5>World Wide:</h5>
               <div className = "container">
 
-                <div className = 'row m-2 mt-3'>
-                  <div className = 'col bg-dark text-white'><b><u>Total Cases:</u></b><br></br>{this.state.globalCases}</div>
-                  <div className = 'col bg-danger text-white'><b><u>Total Deaths:</u></b><br></br>{this.state.globalDeaths}</div>
-                  <div className = 'col bg-success text-white'><b><u>Total Recovered:</u></b><br></br>{this.state.globalRecovered}</div>
+                <div className = 'row ml-2 mr-2 mb-2'>
+                  <div className = 'col bg-dark text-white'><p><b><u>Total Cases:</u></b><br></br>{this.state.globalCases}</p></div>
+                  <div className = 'col bg-danger text-white'><p><b><u>Total Deaths:</u></b><br></br>{this.state.globalDeaths}</p></div>
+                  <div className = 'col bg-success text-white'><p><b><u>Total Recovered:</u></b><br></br>{this.state.globalRecovered}</p></div>
 
                 </div>
 
               </div>
 
-              <p className = "text-white mt-3">Please Select Any Country To Get Information</p>
+              <p className = "text-white mt-3 text-dark">Please Select Any Country To Get Information</p>
 
               <div className = "container">
-                <div className = "row mt-3">
+                <div className = "row m-2 mt-3 mb-3">
 
                     <div className = "col-sm select">
                     <Select
@@ -136,9 +137,25 @@ componentDidMount()
                     />
                     </div>
                     <div className = "col-sm button">
-                      <button className = "getinfo bg-danger">Get Information</button>
+                      <button className = "getinfo">Get Details</button>
                     </div>
                     </div>
+                </div>
+
+                <h5 className = "mt-4">SELECTED COUNTRY: {this.state.globalCases}</h5>
+
+                <div className = "container">
+                  <div className = 'row ml-4 mr-4'>
+
+                  <div className = 'col col-md-6 mt-4 bg-dark text-white'><p><b><u>Total Cases:</u></b><br></br>{this.state.globalCases}</p></div>
+                  <div className = 'col col-md-6 mt-4 bg-danger text-white'><p><b><u>Total Deaths:</u></b><br></br>{this.state.globalDeaths}</p></div>
+                  <div className = 'col col-md-6 mt-4 bg-success text-white'><p><b><u>Total Recovered:</u></b><br></br>{this.state.globalRecovered}</p></div>
+                  <div className = 'col col-md-6 mt-4 bg-secondary text-white'><p><b><u>Total Cases:</u></b><br></br>{this.state.globalCases}</p></div>
+                  <div className = 'col col-md-6 mt-4 bg-warning text-white'><p><b><u>Total Deaths:</u></b><br></br>{this.state.globalDeaths}</p></div>
+                  <div className = 'col col-md-6 mt-4 bg-info text-white'><p><b><u>Total Recovered:</u></b><br></br>{this.state.globalRecovered}</p></div>
+
+                  </div>
+
                 </div>
 
 
