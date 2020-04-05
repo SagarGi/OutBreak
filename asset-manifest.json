@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/outbreak/static/css/main.fc02e1bb.chunk.css",
+    "main.js": "/outbreak/static/js/main.54dc47d6.chunk.js",
+    "main.js.map": "/outbreak/static/js/main.54dc47d6.chunk.js.map",
+    "runtime-main.js": "/outbreak/static/js/runtime-main.653bd7c9.js",
+    "runtime-main.js.map": "/outbreak/static/js/runtime-main.653bd7c9.js.map",
+    "static/js/2.7aca7a1e.chunk.js": "/outbreak/static/js/2.7aca7a1e.chunk.js",
+    "static/js/2.7aca7a1e.chunk.js.map": "/outbreak/static/js/2.7aca7a1e.chunk.js.map",
+    "index.html": "/outbreak/index.html",
+    "precache-manifest.86349ea5c198c9c52f222f97dcef4c6c.js": "/outbreak/precache-manifest.86349ea5c198c9c52f222f97dcef4c6c.js",
+    "service-worker.js": "/outbreak/service-worker.js",
+    "static/css/main.fc02e1bb.chunk.css.map": "/outbreak/static/css/main.fc02e1bb.chunk.css.map",
+    "static/js/2.7aca7a1e.chunk.js.LICENSE.txt": "/outbreak/static/js/2.7aca7a1e.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/outbreak/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.653bd7c9.js",
+    "static/js/2.7aca7a1e.chunk.js",
+    "static/css/main.fc02e1bb.chunk.css",
+    "static/js/main.54dc47d6.chunk.js"
+  ]
+}
