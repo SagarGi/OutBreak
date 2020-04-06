@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/outbreak/static/css/main.8a67e14b.chunk.css",
-    "main.js": "/outbreak/static/js/main.54dc47d6.chunk.js",
-    "main.js.map": "/outbreak/static/js/main.54dc47d6.chunk.js.map",
+    "main.js": "/outbreak/static/js/main.1c4b6bae.chunk.js",
+    "main.js.map": "/outbreak/static/js/main.1c4b6bae.chunk.js.map",
     "runtime-main.js": "/outbreak/static/js/runtime-main.653bd7c9.js",
     "runtime-main.js.map": "/outbreak/static/js/runtime-main.653bd7c9.js.map",
     "static/js/2.7aca7a1e.chunk.js": "/outbreak/static/js/2.7aca7a1e.chunk.js",
     "static/js/2.7aca7a1e.chunk.js.map": "/outbreak/static/js/2.7aca7a1e.chunk.js.map",
     "index.html": "/outbreak/index.html",
-    "precache-manifest.b917034312443c387e7fda001f9b1a19.js": "/outbreak/precache-manifest.b917034312443c387e7fda001f9b1a19.js",
+    "precache-manifest.de3aa9c58b4a24797f9b6f683246dd07.js": "/outbreak/precache-manifest.de3aa9c58b4a24797f9b6f683246dd07.js",
     "service-worker.js": "/outbreak/service-worker.js",
     "static/css/main.8a67e14b.chunk.css.map": "/outbreak/static/css/main.8a67e14b.chunk.css.map",
     "static/js/2.7aca7a1e.chunk.js.LICENSE.txt": "/outbreak/static/js/2.7aca7a1e.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.653bd7c9.js",
     "static/js/2.7aca7a1e.chunk.js",
     "static/css/main.8a67e14b.chunk.css",
-    "static/js/main.54dc47d6.chunk.js"
+    "static/js/main.1c4b6bae.chunk.js"
   ]
 }
