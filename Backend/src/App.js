@@ -108,9 +108,10 @@ handleChange = selectedOption => {
 //gets invoked when page is realoaded
 componentDidMount()
 {
-   axios.get('/covid-19/country')
+   axios.get('/covid-19/country/all')
    .then(response => {
-     console.log(response.data)
+     console.log('hello')
+     console.log(response.data.cases)
      this.setState({
       globalCases : response.data.cases,
       globalDeaths : response.data.deaths,
