@@ -1,3 +1,5 @@
+
+const http = require("http");
 const express = require('express')
 const request = require('request')
 const bodyParser = require('body-parser')
@@ -8,8 +10,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
   }));
+const server = http.createServer(app);
 const port = process.env.PORT || 3002
-
+app.use(express.static('public'))
 app.get('/covid-19/country', (req,res,next) =>{
     request.get('https://corona.lmao.ninja/all', (error,response,body) =>{
         res.send(body)
@@ -27,7 +30,7 @@ app.post('/covid-19',(req,res,next) =>{
 })
 
 
-app.listen(port, ()=>{
+server.listen(port, ()=>{
     console.log("Server is listening...........3002")
 })
 
