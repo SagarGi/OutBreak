@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 const server = http.createServer(app);
 const port = process.env.PORT || 5000
 
-app.use(express.static('Backend/public'))
+app.use(express.static('Backend'));
 
 app.get('/covid-19/country/all', (req,res,next) =>{
     request.get('https://corona.lmao.ninja/all', (error,response,body) =>{
