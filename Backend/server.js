@@ -14,11 +14,7 @@ app.use(bodyParser.urlencoded({
 const server = http.createServer(app);
 const port = process.env.PORT || 5000
 
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('*', (req,re) => {
-    res.sendFile(path.resolve(__dirname, 'build' , 'index.html'))
-})
+app.use(express.static('Backend/public'))
 
 app.get('/covid-19/country/all', (req,res,next) =>{
     request.get('https://corona.lmao.ninja/all', (error,response,body) =>{
