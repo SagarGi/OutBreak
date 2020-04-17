@@ -18,7 +18,7 @@ app.use(express.static(__dirname + '/build'))
 
 
 app.get('/covid-19/country/all', (req,res,next) =>{
-    request.get('https://corona.lmao.ninja/all', (error,response,body) =>{
+    request.get('https://corona.lmao.ninja/v2/all', (error,response,body) =>{
         res.send(body)
     })
 })
@@ -27,7 +27,7 @@ app.post('/covid-19',(req,res,next) =>{
 
     const country = req.body.country1
     console.log(country)
-    request.get(`https://corona.lmao.ninja/countries/${country}`, (error,response,body) =>{
+    request.get(`https://corona.lmao.ninja/v2/countries/${country}`, (error,response,body) =>{
         res.send(body)
     })
 
